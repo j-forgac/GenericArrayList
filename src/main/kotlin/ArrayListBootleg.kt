@@ -1,7 +1,7 @@
-class ArrayList<T>() {
-    private var array: Array<Any?> = arrayOfNulls(10)
+class ArrayListBootleg<T>(private var array: Array<Any?> = arrayOfNulls(0)) {
 
-    var size = 0
+
+    var size = array.size
     val isEmpty : Boolean
         get() = size == 0
 
@@ -23,7 +23,7 @@ class ArrayList<T>() {
         element in array
 
     fun get(index: Int): T {
-        return if(index < 0 || index>=size) throw IndexOutOfBoundsException("Index $index out of bounds for length $size")
+        return if(index < 0 || index>=size) throw IndexOutOfBoundsException("LMAO Index $index out of bounds for length $size")
         else array[index]!! as T
     }
 
